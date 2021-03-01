@@ -1,56 +1,56 @@
 body {
     color: white;
-    font-size: 1.2em;
+    font-size: 1.3em;
 }
 
 .grid-container{
     display: grid;
     grid-gap: 5px;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: 50px 20px auto auto 30px;
+    grid-template-rows: 100px 40px auto auto 60px;
     grid-template-areas: 
     "h h h h h h h h h h h h"
     "n n n n n n n n n n n n"
-    "m m m m m m m m w w w w"
-    "m m m m m m m m w w w w"        
+    "m m m m m m m m m m m m"
+    "w w w w w w w w w w w w"    
     "f f f f f f f f f f f f";
 }
 
-.grid-header{
+header {
     grid-area: h;
     background-color: rgb(206, 33, 33);
 }
 
-.grid-nav{
+nav {
     grid-area: n;
     background-color: rgb(194, 43, 214);
 }
 
-.grid-main{
+main {
     grid-area: m;
     background-color: rgb(0, 38, 255);
 }
 
-.grid-widget{
+aside {
     grid-area: w;
     background-color: rgb(60, 172, 26);
 }
 
-.grid-footer{
+footer {
     grid-area: f;
     background-color: rgb(231, 173, 14);
 }
 
-@media screen and (max-width: 700px) {  
+@media screen and (min-width: 1024px) {  
     body {
-        font-size: 1.3em;
+        font-size: 1.2em;
    }
 
     .grid-container {  
     grid-template-areas:  
     "h h h h h h h h h h h h"
     "n n n n n n n n n n n n"
-    "m m m m m m m m m m m m"
-    "w w w w w w w w w w w w"
+    "m m m m m m m m w w w w"
+    "m m m m m m m m w w w w"
     "f f f f f f f f f f f f";
 }
